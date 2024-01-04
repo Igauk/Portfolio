@@ -1,0 +1,122 @@
+@use '@angular/material' as mat;
+@import "src/material";
+
+.projects {
+  height: 80vh;
+}
+
+.projects__title {
+  padding: 32px 0;
+  font-size: 2.5rem;
+  font-weight: 700;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+.projects-container {
+  display: flex;
+  width: 100%;
+  overflow-x: scroll;
+  height: 80%;
+  padding: 16px;
+  gap: 32px;
+}
+
+.project-card {
+  border-radius: 16px;
+  height: 100%;
+  cursor: pointer;
+  min-width: 500px;
+  overflow-y: clip;
+  background-color: mat.get-color-from-palette($my_primary, 700);
+  transition: transform 0.5s ease;
+}
+
+.project-card__front,
+.project-card__back {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 32px;
+}
+
+.project-card__back {
+  transform: rotateY(180deg);
+  background-color: mat.get-color-from-palette($my_primary, 900);
+}
+
+.project-card__front {
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-card.flipped {
+  transform: rotateY(180deg);
+}
+
+.project-card__title {
+  color: mat.get-color-from-palette($my_secondary, 400);
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 300;
+  font-size: 2.5rem;
+}
+
+.project-card__image {
+  padding: 32px;
+  max-height: 256px;
+  width: 75%;
+}
+
+.project-card__image:hover {
+  cursor: pointer;
+}
+
+.project-card__description {
+  width: 100%;
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 2.0rem;
+  word-wrap: break-word;
+}
+
+.project-card__skills {
+  align-self: flex-end;
+  justify-self: flex-end;
+  text-transform: lowercase;
+  font-size: 1.5rem;
+}
+
+.project-card__link {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 64px !important;
+  height: 64px !important;
+  justify-self: flex-end;
+}
+
+.project-card__icon {
+  height: 100%;
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  .projects {
+    height: 100%;
+    overflow: clip;
+  }
+
+  .projects-container {
+    flex-direction: column;
+    width: 90%;
+    padding: 16px;
+    gap: 32px;
+    align-items: stretch;
+  }
+
+  .project-card {
+    position: relative;
+    min-width: 80%;
+    flex: 1;
+  }
+}

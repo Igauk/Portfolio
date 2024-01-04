@@ -6,10 +6,14 @@
 }
 
 .toolbar {
+  background-color: mat.get-color-from-palette($my_primary, 900);
   position: sticky;
   top: 0;
   padding: 32px;
+  display: flex;
+  align-items: center;
   height: fit-content;
+  z-index: 1000
 }
 
 .toolbar__title {
@@ -17,7 +21,6 @@
   font-size: 2em;
   font-weight: 700;
   font-family: 'Titillium Web', sans-serif;
-  align-self: baseline;
 }
 
 .toolbar__secondary-title {
@@ -26,8 +29,12 @@
   font-weight: 300;
   margin-left: 32px;
   font-family: 'Titillium Web', sans-serif;
-  align-self: baseline;
 }
+
+.toolbar__menu-items {
+  display: flex;
+}
+
 
 .toolbar__menu-item {
   color: mat.get-color-from-palette($my_secondary, 500);
@@ -43,8 +50,20 @@
   cursor: pointer;
 }
 
+// For smaller device compatibility
+@media (max-width: 600px) {
+  .toolbar__menu-items {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .toolbar__menu-item {
+    margin: 4px;
+  }
+}
+
 .portfolio-section {
-  height: 100vh;
+  height: fit-content;
   padding: 0 32px;
 }
 

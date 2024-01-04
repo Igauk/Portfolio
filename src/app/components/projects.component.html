@@ -1,1 +1,29 @@
-<p>projects works!</p>
+<div class="projects">
+  <div class="projects__title">Projects</div>
+
+  <div class="projects-container">
+    <div *ngFor="let project of projects" class="project-card" [class.flipped]="project.isFlipped" (click)="flipCard(project)">
+      <div class="project-card__front" *ngIf="!project.isFlipped">
+        <div class="project-card__title">{{ project.name }}</div>
+        <button mat-icon-button color="accent" class="project-card__link" (click)="flipCard(project, true)">
+          <img src="assets/Vector.svg" class="project-card__icon" alt="{{ project.link }}"/>
+        </button>
+        <img class="project-card__image" [src]="project.image" alt="{{ project.name }}">
+      </div>
+      <div class="project-card__back" *ngIf="project.isFlipped">
+        <div class="project-card__description">
+          {{ project.description }}
+          <ul class="project-card__contributions">
+            <li *ngFor="let contribution of project.contributions">{{ contribution }}</li>
+          </ul>
+        </div>
+        <div class="project-card__skills">
+          <mat-chip-set>
+            <mat-chip class="project-card__skill" disabled color="accent"
+                      *ngFor="let skill of project.skills">{{ skill }}</mat-chip>
+          </mat-chip-set>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

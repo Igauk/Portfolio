@@ -1,11 +1,13 @@
-<mat-toolbar class="toolbar" color="primary">
+<div class="toolbar">
   <div class="toolbar__title">Ian Gauk</div>
   <div class="toolbar__secondary-title">Software Engineer</div>
   <span class="spacer"></span>
-  <div class="toolbar__menu-item" (click)="scrollTo('projects')">Projects</div>
-  <div class="toolbar__menu-item" (click)="scrollTo('resume')">Resume</div>
-  <div class="toolbar__menu-item" (click)="scrollTo('contact')">Contact</div>
-</mat-toolbar>
+  <div class="toolbar__menu-items">
+    <div class="toolbar__menu-item" (click)="scrollTo('projects')">Projects</div>
+    <div class="toolbar__menu-item" (click)="scrollTo('resume')">Resume</div>
+    <div class="toolbar__menu-item" (click)="scrollTo('contact')">Contact</div>
+  </div>
+</div>
 
 <div class="portfolio-section portfolio-section__projects" id="projects">
   <app-projects></app-projects>
