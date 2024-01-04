@@ -1,0 +1,28 @@
+@use '@angular/material' as mat;
+@import "../material";
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.toolbar {
+  padding: 32px;
+  height: fit-content;
+}
+
+.toolbar__title {
+  color: mat.get-color-from-palette($my_secondary, 500);
+  font-size: 2em;
+  font-weight: 700;
+  font-family: 'Titillium Web', sans-serif;
+  align-self: baseline;
+}
+
+.toolbar__secondary-title {
+  color: mat.get-color-from-palette($my_secondary, 500);
+  font-size: 1.75em;
+  font-weight: 300;
+  margin-left: 32px;
+  font-family: 'Titillium Web', sans-serif;
+  align-self: baseline;
+}
