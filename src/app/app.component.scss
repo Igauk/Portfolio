@@ -6,6 +6,8 @@
 }
 
 .toolbar {
+  position: sticky;
+  top: 0;
   padding: 32px;
   height: fit-content;
 }
@@ -25,4 +27,23 @@
   margin-left: 32px;
   font-family: 'Titillium Web', sans-serif;
   align-self: baseline;
+}
+
+.toolbar__menu-item {
+  color: mat.get-color-from-palette($my_secondary, 500);
+  text-transform: uppercase;
+  margin: 16px;
+  font-weight: 400;
+  align-self: baseline;
+}
+
+.toolbar__menu-item:hover {
+  color: mat.get-color-from-palette($my_secondary, 200);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.portfolio-section {
+  height: 100vh;
+  padding: 0 32px;
 }

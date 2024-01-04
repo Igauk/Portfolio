@@ -2,4 +2,19 @@
   <div class="toolbar__title">Ian Gauk</div>
   <div class="toolbar__secondary-title">Software Engineer</div>
   <span class="spacer"></span>
+  <div class="toolbar__menu-item" (click)="scrollTo('projects')">Projects</div>
+  <div class="toolbar__menu-item" (click)="scrollTo('resume')">Resume</div>
+  <div class="toolbar__menu-item" (click)="scrollTo('contact')">Contact</div>
 </mat-toolbar>
+
+<div class="portfolio-section" id="projects">
+  <app-projects></app-projects>
+</div>
+
+<div class="portfolio-section" id="resume">
+  <app-resume></app-resume>
+</div>
+
+<div class="portfolio-section" id="contact">
+  <app-contact></app-contact>
+</div>

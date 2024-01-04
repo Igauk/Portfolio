@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {ViewportScroller} from "@angular/common";
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'IanGaukPortfolio';
+
+  constructor(private viewportScroller: ViewportScroller) {
+    this.viewportScroller.setOffset([0, 128]); // Or else scroll to overshoots
+  }
+
+  scrollTo(section: string): void {
+    this.viewportScroller.scrollToAnchor(section);
+  }
 }
