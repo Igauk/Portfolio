@@ -1,0 +1,19 @@
+.resume {
+  display: flex;
+  flex-direction: column;
+  padding: 32px 0;
+}
+
+.resume__title {
+  padding: 32px 0;
+  font-size: 2.5rem;
+  font-weight: 700;
+  width: 100%;
+  flex: 1;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+.resume__resume {
+  border-radius: 16px;
+  flex: 1;
+}
